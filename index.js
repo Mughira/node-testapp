@@ -1,13 +1,14 @@
 const mysql = require('mysql2');
 const fs = require('fs');
-const path = '/fyp.sql'; // Path to your SQL file
+const path = './mec-sql-latest-db.sql'; // Path to your SQL file
 
 // Create MySQL connection
 const connection = mysql.createConnection({
   host: '10.99.112.32',
   user: 'root',
   password: '$d1cj6,X57/kpBQUj#878$9Git',
-  database: 'mec'
+  database: 'mec',
+  multipleStatements: true
 });
 
 // Connect and run SQL script
